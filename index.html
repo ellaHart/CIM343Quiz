@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guessing Game</title>
+  </head>
+  <body>
+    <h2>How should you NOT refer to JavaScript?</h2>
+
+    <button onclick="check(this)">JS</button>
+    <button onclick="check(this)">VanillaJS</button>
+    <button onclick="check(this)" class="correct">Java</button>
+
+    <h2>What does the C in CSS stands for?</h2>
+
+    <button onclick="check(this)" class="correct">Cascading</button>
+    <button onclick="check(this)">Cat</button>
+    <button onclick="check(this)">Cake</button>
+
+    <script>
+      function check(button) {
+        if (button.classList.contains("correct")) {
+          button.style.background = "green";
+        } else {
+          button.style.background = "red";
+        }
+      }
+    </script>
+  </body>
+</html>
