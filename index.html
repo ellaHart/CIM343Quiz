@@ -1,31 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guessing Game</title>
-  </head>
-  <body>
-    <h2>How should you NOT refer to JavaScript?</h2>
 
-    <button onclick="check(this)">JS</button>
-    <button onclick="check(this)">VanillaJS</button>
-    <button onclick="check(this)" class="correct">Java</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess The Dog Game</title>
+</head>
 
-    <h2>What does the C in CSS stands for?</h2>
+<body
+  style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; text-align: center; background-image: url('https://www.shutterstock.com/image-vector/dog-seamless-pattern-paws-bones-600nw-2350264459.jpg'); background-repeat: repeat;">
+  <div style="max-width: 800px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 10px;">
+    <h1 style="font-size: 2.5em; margin-bottom: 30px;">Guess The Dog Breed?</h1>
 
-    <button onclick="check(this)" class="correct">Cascading</button>
-    <button onclick="check(this)">Cat</button>
-    <button onclick="check(this)">Cake</button>
+    <a href="#">
+      <img src="https://static.wikia.nocookie.net/dogs/images/3/37/Corgi.jpg/revision/latest?cb=20231218193853"
+        style="width: 400px; height: 300px; object-fit: cover;" />
+    </a>
+    <br><br>
 
-    <script>
-      function check(button) {
-        if (button.classList.contains("correct")) {
-          button.style.background = "green";
-        } else {
-          button.style.background = "red";
-        }
+    <button onclick="check(this)">Golden Retriever</button>
+    <button onclick="check(this)">Dachshund</button>
+    <button onclick="check(this)" class="correct">Corgi</button>
+
+    <br><br>
+
+    <a href="#">
+      <img
+        src="https://www.bellaandduke.com/wp-content/uploads/2024/10/A-guide-to-German-Shepherds-characteristics-personality-lifespan-and-more-featured-image.webp"
+        style="width: 400px; height: 300px; object-fit: cover;" />
+    </a>
+    <br><br>
+
+    <button onclick="check(this)" class="correct">German Sheppard</button>
+    <button onclick="check(this)">Dobermann</button>
+    <button onclick="check(this)">Husky</button>
+
+    <br><br>
+
+    <a href="#">
+      <img src="https://cdn.britannica.com/42/233842-050-E64243D7/Pomeranian-dog.jpg"
+        style="width: 400px; height: 300px; object-fit: cover;" />
+    </a>
+    <br><br>
+
+    <button onclick="check(this)">Maltese</button>
+    <button onclick="check(this)" class="correct">Pomeranian</button>
+    <button onclick="check(this)">Chihuahua</button>
+  </div>
+
+  <script>
+    function check(button) {
+      if (button.classList.contains("correct")) {
+        button.style.background = "green";
+      } else {
+        button.style.background = "red";
       }
-    </script>
-  </body>
+    }
+  </script>
+</body>
+
 </html>
