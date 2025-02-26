@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+  background-image: url('https://www.shutterstock.com/image-vector/dog-seamless-pattern-paws-bones-600nw-2350264459.jpg');
+  background-repeat: repeat;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #f9c0c0;
+}
+
+.image-container {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.image-container img {
+  width: 600px;
+  height: 450px;
+  object-fit: cover;
+  transform: scale(1.5);
+  transition: transform 0.5s ease-out, width 0.5s ease-out, height 0.5s ease-out;
+}
+
+button {
+  padding: 12px 20px;
+  margin: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: 0.3s;
+  font-family: 'Patrick Hand', cursive;
+}
+
+button.correct-clicked {
+  background-color: #c8f7c5 !important;
+  color: #3b7a57;
+}
+
+button.wrong-clicked {
+  background-color: #f9c0c0 !important;
+  color: #a04a4a;
+}
+
+button:hover {
+  background-color: #ffd3b6;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #ff85a2;
+}
+
+/* Fixed Score at the Bottom */
+#score {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px 0;
+    font-weight: bold;
+  }
+  

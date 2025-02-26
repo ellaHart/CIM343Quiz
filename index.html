@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guess The Dog Game</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body
@@ -12,16 +13,25 @@
   <div style="max-width: 800px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 10px;">
     <h1 style="font-size: 2.5em; margin-bottom: 30px;">Guess The Dog Breed?</h1>
 
+    <p id="score" style="font-size: 1.5em; margin-bottom: 20px;">Score: 0</p>
+
+    <!-- Question 1 -->
+    <div class="question" data-question="1">
+    <br><br>
+
     <a href="#">
       <img src="https://static.wikia.nocookie.net/dogs/images/3/37/Corgi.jpg/revision/latest?cb=20231218193853"
         style="width: 400px; height: 300px; object-fit: cover;" />
     </a>
     <br><br>
 
-    <button onclick="check(this)">Golden Retriever</button>
-    <button onclick="check(this)">Dachshund</button>
-    <button onclick="check(this)" class="correct">Corgi</button>
+    <button data-question="1">Dachshund</button>
+    <button data-question="1">Basset Hound</button>
+    <button data-question="1" class="correct">Corgi</button>
+  </div>
 
+    <!-- Question 2 -->
+    <div class="question" data-question="2">
     <br><br>
 
     <a href="#">
@@ -31,10 +41,13 @@
     </a>
     <br><br>
 
-    <button onclick="check(this)" class="correct">German Sheppard</button>
-    <button onclick="check(this)">Dobermann</button>
-    <button onclick="check(this)">Husky</button>
+    <button data-question="2" class="correct">German Shepherd</button>
+    <button data-question="2">Belgian Malinois</button>
+    <button data-question="2">Northern Inuit</button>
+</div>
 
+    <!-- Question 3 -->
+    <div class="question" data-question="3">
     <br><br>
 
     <a href="#">
@@ -43,20 +56,153 @@
     </a>
     <br><br>
 
-    <button onclick="check(this)">Maltese</button>
-    <button onclick="check(this)" class="correct">Pomeranian</button>
-    <button onclick="check(this)">Chihuahua</button>
+    
+    <button data-question="3">Maltese</button>
+    <button data-question="3" class="correct">Pomeranian</button>
+    <button data-question="3">Chihuahua</button>
+  </div>
+
+    <!-- Question 4 -->
+    <div class="question" data-question="4">
+    <br><br>
+
+    <a href="#">
+      <img src="https://www.carecredit.com/sites/cc/image/hero_australian_shepherd.jpg"
+        style="width: 400px; height: 300px; object-fit: cover;" />
+    </a>
+    <br><br>
+
+    <button data-question="4">Australian Cattle Dog</button>
+    <button data-question="4" class="correct">Australian Shepherd</button>
+    <button data-question="4">Pyrenean Shepherd</button>
+</div>
+
+    <!-- Question 5 -->
+    <div class="question" data-question="5">
+    <br><br>
+
+    <a href="#">
+      <img src="https://www.carecredit.com/sites/cc/image/american_bulldog_hero.jpg"
+        style="width: 400px; height: 300px; object-fit: cover;" />
+    </a>
+    <br><br>
+
+    <button data-question="5">Pug</button>
+    <button data-question="5">Boxer</button>
+    <button data-question="5" class="correct">Bulldog</button>
+  </div>
+
+    <!-- Question 6 -->
+    <div class="question" data-question="6">
+    <br><br>
+
+    <a href="#">
+      <img src="https://www.dogster.com/wp-content/uploads/2024/03/akita-dog-standing-at-the-park_Nikoleta-Vukovic_Shutterstock.jpg"
+        style="width: 400px; height: 300px; object-fit: cover;" />
+    </a>
+    <br><br>
+
+    <button data-question="6">Husky</button>
+    <button data-question="6" class="correct">Akita</button>
+    <button data-question="6">Chow Chow</button>
+</div>
+
+    <!-- Question 7 -->
+    <div class="question" data-question="7">
+    <br><br>
+
+    <a href="#">
+      <img src="https://blog.tryfi.com/content/images/2024/01/American-Foxhounds-Rare.jpg"
+        style="width: 400px; height: 300px; object-fit: cover;" />
+    </a>
+    <br><br>
+
+    <button data-question="7" class="correct">American Foxhound</button>
+    <button data-question="7">Beagle</button>
+    <button data-question="7">Harrier</button>
+  </div>
+
+    <!-- Question 8 -->
+    <div class="question" data-question="8">
+    <br><br>
+
+    <a href="#">
+      <img src="https://hfu.hollywoodfeed.com/wp-content/uploads/2024/07/GettyImages-858784448-scaled.jpg"
+        style="width: 400px; height: 300px; object-fit: cover;" />
+    </a>
+    <br><br>
+
+    <button data-question="8" class="correct">Basset Hound</button>
+    <button data-question="8">Bloodhound</button>
+    <button data-question="8">Jack Russell Terrier</button>
+</div>
+
+    <!-- Question 9 -->
+    <div class="question" data-question="9">
+    <br><br>
+
+    <a href="#">
+      <img src="https://pet-health-content-media.chewy.com/wp-content/uploads/2024/09/11170806/202106Havanese-FeaturedImage.jpg"
+        style="width: 400px; height: 300px; object-fit: cover;" />
+    </a>
+    <br><br>
+
+    <button data-question="9">Maltese</button>
+    <button data-question="9">Shih Tzu</button>
+    <button data-question="9" class="correct">Havanese</button>
+</div>
+
+    <!-- Question 10 -->
+    <div class="question" data-question="10">
+    <br><br>
+
+    <a href="#">
+      <img src="https://www.akc.org/wp-content/uploads/2017/11/Azawakh_178091272.jpg"
+        style="width: 400px; height: 300px; object-fit: cover;" />
+    </a>
+    <br><br>
+
+    <button data-question="9">Great Dane</button>
+    <button data-question="9" class="correct">Azawakh</button>
+    <button data-question="9">Greyhound</button>
+</div>
+    
+
   </div>
 
   <script>
-    function check(button) {
-      if (button.classList.contains("correct")) {
-        button.style.background = "green";
-      } else {
-        button.style.background = "red";
-      }
-    }
+    let score = 0;
+    let attempts = {}; // Track attempts per question
+  
+    // Select all buttons with a data-question attribute
+    document.querySelectorAll("button[data-question]").forEach(button => {
+      button.addEventListener("click", function () {
+        let questionNumber = this.getAttribute("data-question");
+  
+        if (!(questionNumber in attempts)) {
+          attempts[questionNumber] = 0; // Initialize attempts for the question
+        }
+  
+        attempts[questionNumber]++; // Increment attempts
+  
+        if (this.classList.contains("correct") && attempts[questionNumber] === 1) {
+          this.style.background = "#4CAF50";  // Softer green  // Correct answer on first attempt
+          score++;  // Increase score only if it's the first try
+        } else if (this.classList.contains("correct")) {
+          this.style.background = "#b6dd72";  // Correct answer on subsequent attempts
+        } else {
+          this.style.background = "#ff6b6b";  // Softer red  // Incorrect answer
+        }
+  
+        // Update score display
+        document.getElementById("score").textContent = `Score: ${score}`;
+      });
+    });
+
+    
   </script>
+  
+  
 </body>
 
 </html>
